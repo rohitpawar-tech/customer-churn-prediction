@@ -32,7 +32,7 @@ This project is a **web-based machine learning application** that predicts wheth
 - Scrollable, interactive form with a loading spinner for prediction.
 
 ## Project Structure
-
+With All Independencis
 ```
 
 customer-churn-prediction/
@@ -119,3 +119,4 @@ This project is licensed under the MIT License.
 
 Do you want me to do that next?
 ```
+
