@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg: #f3f4f6;
+            --text-main: #1f2937;
+            --card-bg: #ffffff;
+            --accent-bg: #eef2ff;
+            --accent-text: #4338ca;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--text-main);
+        }
+
+        /* Card Container Animation */
+        .card {
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            animation: slideUpFade 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        /* Result Box Styling & Animation */
+        .result-box {
+            background-color: var(--accent-bg);
+            border: 2px solid #c7d2fe;
+            color: var(--accent-text);
+            padding: 1.5rem;
+            border-radius: 12px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            
+            /* Animation properties */
+            opacity: 0;
+            transform: scale(0.8);
+            animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s forwards; /* Delayed start */
+        }
+
+        /* Go Back Button Styling */
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            background-color: var(--primary);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        /* Hover Animation for Button */
+        .back-btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.5);
+        }
+
+        .back-btn:active {
+            transform: translateY(-1px) scale(1.02);
+        }
+
+        /* Animations */
+        @keyframes slideUpFade {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes popIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Prediction Result</h1>
+        
+        <div class="result-box">
+            {{ result }}
+        </div>
+
+        <a href="/" class="back-btn">Go Back</a>
+    </div>
+
+</body>
+</html>
