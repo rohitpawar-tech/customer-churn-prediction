@@ -40,6 +40,7 @@ customer-churn-prediction/
 ├─ model/
 │   └─ churn_model.pkl           # Trained ML model
 ├─ templates/
+|-- login.html
 │   ├─ index.html                # Main input form
 │   └─ result.html               # Prediction result page
 ├─ trainModel.py                 # Script to train the model
@@ -119,4 +120,5 @@ This project is licensed under the MIT License.
 
 Do you want me to do that next?
 ```
+
 
