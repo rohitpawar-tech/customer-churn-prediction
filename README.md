@@ -6,7 +6,6 @@
 ```
 customer-churn-prediction
 ```
-
 --
 
 ### **GitHub Repository Description:**
@@ -121,6 +120,7 @@ This project is licensed under the MIT License.
 
 Do you want me to do that next?
 ```
+
 
 
 
